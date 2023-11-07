@@ -1,9 +1,9 @@
 import React from "react";
 import styles from './cube.module.css';
 
-export default function Cube({text}) {
+export default function Cube({text, movable}) {
   return (
-    <div className={styles.cube}>
+    <div className={movable ? styles.cubeActive : styles.cubeInactive}>
       {text}
     </div>
   )

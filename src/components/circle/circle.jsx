@@ -1,8 +1,8 @@
 import React from "react";
 import styles from './circle.module.css';
 
-export default function Circle() {
+export default function Circle({move}) {
   return (
-    <div className={styles.circle} />
+    <div className={move ? styles.circleActive : styles.circleInactive} />
   )
 }

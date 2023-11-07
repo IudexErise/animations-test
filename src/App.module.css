@@ -1,7 +1,23 @@
+@keyframes animation {
+  0% {
+    position: absolute;
+    top: 0%;
+  }
+
+  50% {
+    position: absolute;
+    top: 100%;
+  }
+
+  100% {
+    position: absolute;
+    top: 0%;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
-  margin: 100px;
   align-items: center;
   gap: 50px;
 }
@@ -11,10 +27,14 @@
   height: 300px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
-.cubes {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+.movable {
+  width: 300px;
+  height: 300px;
+  animation-name: animation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  position: relative;
+} 

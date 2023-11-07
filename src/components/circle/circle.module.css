@@ -1,4 +1,22 @@
-.circle {
+@keyframes horizontal {
+  100% {
+    transform: translate(300px, 150px);
+  }
+}
+
+.circleActive {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: yellowgreen;
+  animation-name: horizontal;
+  animation-duration: 2s;
+  top: inherit;
+  opacity: 0;
+}
+
+.circleInactive {
+  margin-top: -50px;
   width: 30px;
   height: 30px;
   border-radius: 50%;

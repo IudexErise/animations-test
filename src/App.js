@@ -1,19 +1,23 @@
+import { useState } from 'react';
 import styles from './App.module.css';
 import Button from './components/button/button';
 import Circle from './components/circle/circle';
 import Cube from './components/cube/cube';
 
 function App() {
+
+  const [move, setMove] = useState(false);
+
   return (
     <div className={styles.container}>
       <div className={styles.animation}>
-        <div className={styles.cubes}>
-          <Cube text='1' />
-          <Cube text='2' />
-        </div>
-        <Circle />
+          <div className={styles.movable}>
+          <Cube text='1' movable={true} />
+          <Circle move={move}/>
+          </div>
+          <Cube text='2' movable={false} />
       </div>
-      <Button />
+      <Button setMove={setMove}/>
     </div>
   );
 }
