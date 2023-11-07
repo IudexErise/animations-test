@@ -12,7 +12,6 @@
   animation-name: horizontal;
   animation-duration: 2s;
   top: inherit;
-  opacity: 0;
 }
 
 .circleInactive {
@@ -21,4 +20,5 @@
   height: 30px;
   border-radius: 50%;
   background-color: yellowgreen;
+  opacity: 0;
 }
